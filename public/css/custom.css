@@ -275,7 +275,7 @@ a:hover {
 .btn-action {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -358,7 +358,7 @@ a:hover {
 .btn-action-table {
   width: 32px;
   height: 32px;
-  border-radius: 50%;
+  border-radius: 4px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -497,7 +497,7 @@ a:hover {
   width: 35px;
   height: 35px;
   border: 2px solid;
-  border-radius: 50%;
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -597,7 +597,7 @@ a:hover {
   width: 35px;
   height: 35px;
   border: 2px solid;
-  border-radius: 50%;
+  border-radius: 4px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -656,7 +656,7 @@ a:hover {
   width: 35px;
   height: 35px;
   border: 2px solid;
-  border-radius: 50%;
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
