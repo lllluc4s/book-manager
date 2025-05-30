@@ -70,7 +70,7 @@
                 @endif
 
                 <div class="mt-4">
-                    <a href="{{ route('authors.index') }}" class="btn btn-custom-outline">
+                    <a href="{{ route('authors.index') }}" class="btn btn-custom-primary">
                         <i class="bi bi-arrow-left"></i> Voltar à Lista
                     </a>
                 </div>

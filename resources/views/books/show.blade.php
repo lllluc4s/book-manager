@@ -67,7 +67,7 @@
                 </div>
 
                 <div class="mt-4">
-                    <a href="{{ route('books.index') }}" class="btn btn-custom-outline">
+                    <a href="{{ route('books.index') }}" class="btn btn-custom-primary">
                         <i class="bi bi-arrow-left"></i> Voltar à Lista
                     </a>
                 </div>
