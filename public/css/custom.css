@@ -3,6 +3,30 @@ body {
   padding-top: 70px; /* Espaçamento para navbar fixa */
 }
 
+/* Estilos para visualização de autor */
+.author-book-card {
+  background-color: #f0f0f0 !important;
+  border-radius: 0.25rem;
+}
+
+.bg-light.p-4 {
+  border-radius: 0.25rem;
+}
+
+.card.bg-white {
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.row-uniform-height .card-uniform-height {
+  height: 100%;
+  transition: transform 0.2s;
+}
+
+.row-uniform-height .card-uniform-height:hover {
+  transform: translateY(-5px);
+}
+
 /* Paleta de cores personalizada */
 :root {
   --primary-color: #333;

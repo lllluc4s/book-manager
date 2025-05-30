@@ -33,7 +33,7 @@
                     @endif
                 </div>
             </div>
-            <div class="card-body">
+            <div class="card-body author-book-card">
                 <h5>Livros do Autor ({{ $author->books->count() }})</h5>
                 
                 @if($author->books->count() > 0)
