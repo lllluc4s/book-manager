@@ -63,7 +63,9 @@
                         <label for="capa" class="form-label">Capa do Livro</label>
                         <div class="mb-2">
                             <div class="d-flex align-items-start gap-3">
-                                <img src="{{ $book->capa ? asset('storage/' . $book->capa) : asset('images/default-book-cover.svg') }}" alt="Capa atual" class="img-thumbnail" style="width: 100px; height: 100px; object-fit: cover;">
+                                <div class="book-cover-container">
+                                    <img src="{{ $book->capa ? asset('storage/' . $book->capa) : asset('images/default-book-cover.svg') }}" alt="Capa atual" class="img-thumbnail book-cover-image" style="width: 100px; height: 100px; object-fit: cover;">
+                                </div>
                                 <div>
                                     <small class="text-muted d-block mb-2">{{ $book->capa ? 'Capa atual' : 'Capa padrão (nenhuma capa enviada)' }}</small>
                                     @if($book->capa)

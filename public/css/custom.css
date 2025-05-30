@@ -720,3 +720,29 @@ a:hover {
   display: flex;
   align-items: center;
 }
+
+/* Efeito de hover com zoom nas capas de livros */
+.book-cover-image {
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-in-out;
+  transform-origin: center;
+  position: relative;
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.book-cover-image:hover {
+  transform: scale(1.15);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  cursor: pointer; /* Adiciona cursor de ponteiro para indicar interatividade */
+}
+
+/* Garantir que o container da imagem mantenha o alinhamento durante o hover */
+.book-cover-container {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 4px;
+}

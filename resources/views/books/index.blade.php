@@ -17,10 +17,10 @@
         @foreach($books as $book)
             <div class="col-md-4 mb-4">
                 <div class="card h-100 book-card card-uniform-height">
-                    <div class="text-center pt-3">
+                    <div class="text-center pt-3 book-cover-container">
                         <img src="{{ $book->capa ? asset('storage/' . $book->capa) : asset('images/default-book-cover.svg') }}" 
                              alt="Capa de {{ $book->titulo }}" 
-                             class="rounded"
+                             class="rounded book-cover-image"
                              style="width: 120px; height: 120px; object-fit: cover;">
                     </div>
                     <div class="card-body d-flex flex-column">

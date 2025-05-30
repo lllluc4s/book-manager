@@ -30,10 +30,12 @@
                 <div class="row">
                     <div class="col-md-3 mb-3">
                         <h6 class="text-muted">Capa</h6>
-                        <img src="{{ $book->capa ? asset('storage/' . $book->capa) : asset('images/default-book-cover.svg') }}" 
-                             alt="Capa de {{ $book->titulo }}" 
-                             class="img-fluid rounded shadow-sm"
-                             style="max-width: 200px; max-height: 200px; object-fit: cover;">
+                        <div class="book-cover-container">
+                            <img src="{{ $book->capa ? asset('storage/' . $book->capa) : asset('images/default-book-cover.svg') }}" 
+                                 alt="Capa de {{ $book->titulo }}" 
+                                 class="img-fluid rounded shadow-sm book-cover-image"
+                                 style="max-width: 200px; max-height: 200px; object-fit: cover;">
+                        </div>
                     </div>
                     <div class="col-md-9">
                     @endif
