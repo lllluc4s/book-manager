@@ -5,7 +5,7 @@
 @section('content')
 <div class="row justify-content-center">
     <div class="col-md-8">
-        <div class="card">
+        <div class="card shadow-sm">
             <div class="card-header">
                 <div class="d-flex justify-content-between align-items-center">
                     <h4 class="mb-0"><i class="bi bi-book"></i> {{ $book->titulo }}</h4>
@@ -26,14 +26,14 @@
                     </div>
                 </div>
             </div>
-            <div class="card-body pt-4">
-                <div class="row">
+            <div class="card-body pt-4 px-4 pb-4" style="background-color: #f8f9fa;">
+                <div class="row g-4">
                     <div class="col-md-3 mb-3">
                         <h6 class="text-muted">Capa</h6>
-                        <div class="book-cover-container">
+                        <div class="book-cover-container bg-white rounded shadow-sm p-3">
                             <img src="{{ $book->capa ? asset('storage/' . $book->capa) : asset('images/default-book-cover.svg') }}" 
                                  alt="Capa de {{ $book->titulo }}" 
-                                 class="img-fluid rounded shadow-sm book-cover-image"
+                                 class="img-fluid rounded book-cover-image"
                                  style="max-width: 200px; max-height: 200px; object-fit: cover;">
                         </div>
                     </div>
@@ -60,14 +60,14 @@
 
                     <div class="col-12 mt-3">
                         <h6 class="text-muted">Descrição</h6>
-                        <div class="border rounded p-3 bg-light">
+                        <div class="border rounded p-4 bg-white shadow-sm">
                             {!! nl2br(e($book->descricao)) !!}
                         </div>
                     </div>
                 </div>
 
-                <div class="mt-4">
-                    <a href="{{ route('books.index') }}" class="btn btn-custom-primary">
+                <div class="mt-5">
+                    <a href="{{ route('books.index') }}" class="btn btn-custom-primary shadow-sm">
                         <i class="bi bi-arrow-left"></i> Voltar à Lista
                     </a>
                 </div>

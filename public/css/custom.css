@@ -299,6 +299,12 @@ a:hover {
   color: #198754 !important;
 }
 
+/* Estilo personalizado para o bloco de informações dos livros */
+.card-body.bg-light {
+  background-color: #f8f9fa !important;
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+
 .btn-view:hover {
   background-color: #198754 !important;
   color: white !important;
