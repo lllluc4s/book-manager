@@ -69,7 +69,7 @@
                     </div>
 
                     <div class="d-flex justify-content-between">
-                        <a href="{{ route('books.index') }}" class="btn btn-custom-outline">
+                        <a href="{{ route('books.index') }}" class="btn btn-custom-primary">
                             <i class="bi bi-arrow-left"></i> Voltar
                         </a>
                         <button type="submit" class="btn btn-custom-primary">

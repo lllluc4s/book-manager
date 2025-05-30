@@ -38,7 +38,7 @@
                     </div>
 
                     <div class="d-flex justify-content-between">
-                        <a href="{{ route('authors.show', $author) }}" class="btn btn-custom-outline">
+                        <a href="{{ route('authors.show', $author) }}" class="btn btn-custom-primary">
                             <i class="bi bi-arrow-left"></i> Voltar
                         </a>
                         <button type="submit" class="btn btn-custom-primary">
