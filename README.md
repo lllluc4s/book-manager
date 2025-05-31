@@ -31,8 +31,17 @@ Sistema Laravel para gestão de livros e autores. Inclui interface web, API REST
 - MySQL >= 8.0
 - Composer
 - Node.js (opcional, para assets)
+- Extensões PHP: GD, mbstring, xml, curl, zip, mysql, sqlite3 (para testes)
 
-### 2. Instalação
+### 2. Instalação das Extensões PHP
+
+```bash
+# Extensões PHP necessárias para o projeto
+sudo apt update
+sudo apt install -y php8.3-gd php8.3-mbstring php8.3-xml php8.3-curl php8.3-zip php8.3-mysql php8.3-sqlite3
+```
+
+### 3. Instalação
 
 ```bash
 # Clonar o repositório
@@ -47,20 +56,27 @@ cp .env.example .env
 php artisan key:generate
 ```
 
-### 3. Configurar Banco de Dados
+### 4. Configurar Banco de Dados
 
-Edite o arquivo `.env` com suas credenciais:
+Execute o script de configuração do banco de dados disponível na raiz do projeto:
 
-```env
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=book_manager
-DB_USERNAME=seu_usuario
-DB_PASSWORD=sua_senha
+```bash
+# Tornar o script executável
+chmod +x setup-database.sh
+
+# Executar o script para criar o banco de dados e o usuário automaticamente
+./setup-database.sh
 ```
 
-### 4. Inicializar o Sistema
+O script irá configurar um banco MySQL com as seguintes credenciais:
+
+- **Database:** book_manager
+- **Username:** laravel
+- **Password:** laravel123
+
+Estas credenciais já estão configuradas no arquivo `.env` por padrão.
+
+### 5. Inicializar o Sistema
 
 ```bash
 # Executar migrações e popular dados
@@ -126,13 +142,22 @@ php artisan schedule:list
 
 # Rodar migrações fresh (cuidado: apaga dados!)
 php artisan migrate:fresh --seed
+
+# Verificar extensões PHP instaladas
+php -m | grep -E 'gd|mbstring|xml|curl|zip|mysql|sqlite'
 ```
 
 ## 🧪 Testes de Verificação
 
-O sistema inclui testes automatizados para validar funcionalidades:
+O sistema inclui testes automatizados para validar funcionalidades. Para executar os testes, você precisa ter a extensão SQLite3 do PHP instalada:
 
 ```bash
+# Verifique se a extensão SQLite está instalada
+php -m | grep sqlite
+
+# Se não estiver instalada, instale-a
+sudo apt install -y php8.3-sqlite3
+
 # Executar todos os testes
 ./vendor/bin/pest
 
